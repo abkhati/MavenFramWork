@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 public class Test1 {
 
 	@Test
-	public void facebook()
+	public void facebooktest()
 	{
 		System.out.println("Hello! Zukya Dada");
 		// Mavan Command Line Plugh ins
@@ -34,5 +34,22 @@ public class Test1 {
 		 </plugins>
 		 </build>
 		 */
+	}
+	
+	@Test(groups="Food")
+	public void swiggytest()
+	{
+		WebDriver  driver = new ChromeDriver();
+		driver.get("https://www.swiggy.com/");
+		String actualtitle = driver.getTitle();
+		System.out.println(actualtitle);
+	}
+	@Test(groups="Food")
+	public void zomatotest()
+	{
+		WebDriver  driver = new ChromeDriver();
+		driver.get("https://www.zomato.com/");
+		String actualtitle = driver.getTitle();
+		System.out.println(actualtitle);
 	}
 }
